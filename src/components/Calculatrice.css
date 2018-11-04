@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url('../font/Digital-7.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.calculette{
+    display: flex;
+    width:430px;
+    height: 650px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 200px;
+    border:3px solid black;
+    border-radius: 30px;
+    background-color: dimgray;
+    box-shadow: 20px 20px 80px;
+}
+
+.ecran{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border: 2px solid black;
+    color: rgb(65, 65, 65);
+    font-size: 3em;
+    font-family: 'Digital-7';
+    width: 360px;
+    height: 400px;
+    bottom: -50px;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 1px;
+    background-color: #CCDECE;
+}
+
+.calcul{
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.resultat{
+    margin-bottom: 25px;
+    margin-right: 10px;
+}
+
+.operateur{
+    bottom: 320px;
+    position: relative;
+}
+
+.boutons{
+    width:320px;
+    position: relative;
+    display: block;
+    bottom: -100px;
+    right: 45px;
+}
+
+.null{
+    position: relative;
+    width: 80px;
+    height: 48px;
+    bottom: -10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(to bottom left,#d8d8d8 0%, #e6e6e6 100%);
+    box-shadow: 3px 3px 1px;
+    outline: none;
+    }
+
+
+.touche{
+    position: relative;
+    width: 80px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(to bottom left,#d8d8d8 0%, #e6e6e6 100%);
+    box-shadow: 3px 3px 1px;
+    outline: none;
+}
+
+.touche:hover{
+    box-shadow: inset 3px 3px 1px;
+    background: linear-gradient(to top left, #d8d8d8 0%, #e6e6e6 100%); 
+    outline: none;
+}
+
+.grp-btns{
+    position: relative;
+    bottom: 50px;
+}
+
+.pct-clr-btn{
+    margin-right: 10px;
+    display: block;
+    position: relative;
+    right: 45px;
+    bottom: -100px;
+}
+
+.btnpoint{
+    position: relative;
+    width: 80px;
+    height: 50px;
+    bottom: -40px;
+    left: 45px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #d8d8d8 0%, #e6e6e6 100%);
+    box-shadow: 3px 3px 2px;
+    outline: none;
+}
+
+.btnpoint:hover{
+    box-shadow: inset 3px 3px 2px;
+    background: linear-gradient(to bottom left,#d8d8d8 0%, #e6e6e6 100%); 
+    outline: none;
+}
+
+.clear{
+    width: 80px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #d8d8d8 0%, #e6e6e6 100%);
+    box-shadow: 3px 3px 2px;
+    outline: none;
+}
+
+.clear:hover{
+    box-shadow: inset 3px 3px 2px;
+    background: linear-gradient(to bottom left,#d8d8d8 0%, #e6e6e6 100%); 
+    outline: none;
+}
+
+.pourcent{
+    width: 80px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #d8d8d8 0%, #e6e6e6 100%);
+    box-shadow: 3px 3px 2px;
+    outline: none;
+}
+
+.pourcent:hover{
+    box-shadow: inset 3px 3px 2px;
+    background: linear-gradient(to bottom left,#d8d8d8 0%, #e6e6e6 100%); 
+    outline: none;
+}
+
+.retour{
+    position: relative;
+    width: 80px;
+    height: 50px;
+    bottom: 6px;
+    left: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #d8d8d8 0%, #e6e6e6 100%);
+    box-shadow: 3px 3px 2px;
+    outline: none;
+}
+
+.retour:hover{
+    box-shadow: inset 3px 3px 2px;
+    background: linear-gradient(to bottom left,#d8d8d8 0%, #e6e6e6 100%); 
+    outline: none;
+}
+
+.egal{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    bottom: -230px;
+    left: -135px;
+}
+
+.btn-egal{
+    width: 80px;
+    height: 50px;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 15px;
+    bottom: 320px;
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #880000 0%, #ee5e5e 100%);
+    box-shadow: 3px 3px 2px;
+    outline: none;
+}
+
+.btn-egal:hover{
+    box-shadow: inset 3px 3px 2px;
+    background: linear-gradient(to top left, #ff0000 0%, #fff099 107%); 
+    outline: none;
+}
