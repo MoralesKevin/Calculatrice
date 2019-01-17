@@ -3,6 +3,8 @@ import math from 'mathjs';
 import Chiffres from '../reducers/Chiffres';
 import Operateurs from '../reducers/Operateurs';
 import "./Calculatrice.css";
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
 
 class Calculette extends Component {
     constructor(props) {
@@ -46,28 +48,31 @@ class Calculette extends Component {
 
     render() {
         return (
-            <div className="calculette">
-                <p className="ecran">
-                    <span className="calcul">{this.state.ecran}</span>
-                    <span className="resultat">{this.state.resultat}</span>
-                </p>
-                <div className="pct-clr-btn">
-                    <button className="null" onClick={this.clear}> </button>
-                    <button className="clear" onClick={this.clear}>C</button>
-                    <button className="retour" onClick={this.return}>return</button>
+            <div>
+                <div className="calculette">
+                    <p className="ecran">
+                        <span className="calcul">{this.state.ecran}</span>
+                        <span className="resultat">{this.state.resultat}</span>
+                    </p>
+                    <div className="pct-clr-btn">
+                        <button className="null" onClick={this.clear}> </button>
+                        <button className="clear" onClick={this.clear}>C</button>
+                        <button className="retour" onClick={this.return}>return</button>
+                    </div>
+                    <div className="boutons">
+                        {this.state.numbers.map(number => <button className="touche" onClick={this.handleClick} key={number.id} value={number.valeur}>{number.valeur}</button>)}
+                    </div>
+                    <div>
+                        <button className="btnpoint">.</button>
+                    </div>
+                    <div className="operateur">
+                        {this.state.operators.map(operator => <button className="touche" onClick={this.handleClick} key={operator.id} value={operator.valeur}>{operator.valeur}</button>)}
+                    </div>
+                    <div className="egal">
+                        <button className="btn-egal" value="=" onClick={this.operation}>=</button>
+                    </div>
                 </div>
-                <div className="boutons">
-                    {this.state.numbers.map(number => <button className="touche" onClick={this.handleClick} key={number.id} value={number.valeur}>{number.valeur}</button>)}
-                </div>
-                <div>
-                    <button className="btnpoint">.</button>
-                </div>
-                <div className="operateur">
-                    {this.state.operators.map(operator => <button className="touche" onClick={this.handleClick} key={operator.id} value={operator.valeur}>{operator.valeur}</button>)}
-                </div>
-                <div className="egal">
-                    <button className="btn-egal" value="=" onClick={this.operation}>=</button>
-                </div>
+                <Rater className='rater' total={5} rating={2}/>
             </div>
         );
     }
